@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Catalog</title>
+  <style>
+    body {
+      background-color: #011248; /* Dark blue */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      color: #FFD700; /* Yellow */
+      text-align: center;
+      margin-top: 20px;
+      font-size: 40px;
+      text-shadow: 2px 2px 4px black; /* Black shadow */
+      padding: 10px;
+      background-color: black;
+    }
+
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .product-card {
+      width: 300px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+      background-color: #F0FFF0; /* Honeydew */
+    }
+
+    .product-image {
+      max-width: 100%;
+      max-height: 200px;
+      margin-bottom: 10px;
+    }
+
+    .product-name {
+      color: #008080; /* Teal */
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .product-price {
+      color: #FFD700; /* Yellow */
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product-container" id="product-container"></div>
+
+  <script>
+    // JavaScript code to dynamically generate product cards
+    const products = [
+      { name: 'Rectangular Basket', image: 'https://media.karousell.com/media/photos/products/2022/3/1/mangyan_rectangle_basket_with__1646156783_4bb1c960_progressive.jpg', price: 350 },
+      { name: 'Bayong Sinuluyan', image: 'https://lsmedia.linker-cdn.net/270219/2021/5703841.jpeg', price: 200 },
+      { name: 'Tribal Beaded Necklace and Bracelet', image: 'https://img.etsystatic.com/il/22917d/428051574/il_570xN.428051574_g4u7.jpg?version=0', price: 250 },
+      { name: 'Iraya-Mangyan Jar', image: 'http://1.bp.blogspot.com/-v8pt1qs4va8/Ukxvw_UzTlI/AAAAAAAAHTA/nw7k4cKYZp0/s1600/Tabuyo+without+cover+(20x8+inches)+(1).jpg', price: 500 },
+      { name: 'Nito Basket', image: 'https://i.ebayimg.com/images/g/cdUAAOxyUI1TGXt7/s-l640.jpg', price: 100 },
+      { name: 'Iraya-Mangyan Pallidong', image: 'https://s-media-cache-ak0.pinimg.com/originals/e0/d0/ae/e0d0aec564f4de4b61f0e15a933a6973.jpg', price: 150 },
+
+    ];
+
+    const container = document.getElementById('product-container');
+
+    products.forEach(product => {
+      const card = document.createElement('div');
+      card.classList.add('product-card');
+
+      const image = document.createElement('img');
+      image.classList.add('product-image');
+      image.src = product.image;
+      card.appendChild(image);
+
+      const name = document.createElement('h2');
+      name.classList.add('product-name');
+      name.textContent = product.name;
+      card.appendChild(name);
+
+      const price = document.createElement('p');
+      price.classList.add('product-price');
+      price.textContent = '₱' + product.price.toFixed(2);
+      card.appendChild(price);
+
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>

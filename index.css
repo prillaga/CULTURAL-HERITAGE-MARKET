@@ -1,0 +1,301 @@
+html {
+  scroll-behavior: smooth !important;
+}
+
+* {
+  font-family: 'ABeeZee', sans-serif;
+  color: black;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.navbar {
+  opacity: 0.8;
+}
+
+.zuitt {
+  height: 35px;
+  width: 35px;
+}
+
+body {
+  background-color: #011248;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 100px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+h1 {
+  color: #e9c611; /* Yellow */
+  text-align: center;
+  margin-top: 20px;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px black; /* Black shadow */
+  padding: 10px;
+}
+
+h2 {
+  text-shadow: 1px 1px black;
+  text-align: center;
+}
+
+h3 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+div {
+  color: white;
+}
+
+button {
+  border-radius: 10px;
+  opacity: 0.8;
+  border-color: darkgray;
+}
+
+#landing {
+  margin-top: 12.5vh;
+  height: 87.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(./images/BG.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+@media (max-width: 1500px) {
+  #landing {
+    background-size: cover;
+  }
+}
+
+#aboutus {
+  margin-top: 12.5vh;
+  height: 87.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(./images/BG2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#facebookpage {
+  padding: 5vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  row-gap: 5%;
+}
+
+#contactpage {
+  width: 100%;
+  height: 100%;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font: 300 60px 'ABeeZee', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+}
+
+/* Left contact page */
+.form-horizontal {
+  max-width: 400px;
+  font-family: 'ABeeZee';
+  font-weight: 400;
+}
+
+.form-control,
+textarea {
+  max-width: 400px;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.alt-send-button {
+  width: 400px;
+  height: 34px;
+  transition: all 0.2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 700 12px 'ABeeZee', sans-serif;
+  letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+.direct-contact-container {
+  max-width: 400px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 18px 'ABeeZee', sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+em {
+  color: black;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 850px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .direct-contact-container,
+  .form-horizontal {
+    margin: 0 auto;
+  }
+
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .direct-contact-container,
+  .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }
+  .form-control,
+  textarea {
+    margin: 0 auto;
+  }
+
+  .name,
+  .email,
+  textarea {
+    width: 280px;
+  }
+
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .send-button {
+    width: 99%;
+  }
+
+  .tools {
+    border: 5px solid #f2f2f2;
+    width: 75%;
+    margin: 20px;
+    padding: 25px;
+    color: white;
+    clip-path: none;
+  }
+}
+
+.p-0 {
+  padding: 0px;
+}
+
+.content img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .content img {
+    height: 600px !important;
+  }
+}
